@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continents</title>
+</head>
+
+<body>
+  {% if continents %}
+  <table>
+    <thead>
+      <th>Continent id</th>
+      <th>Continent name</th>
+    </thead>
+    <tbody>
+      {% for cont in continents %}
+      <tr>
+        <td>{{cont.id}}</td>
+        <td>{{cont.continent_name}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>NO CONTINENTS FOUND!</p>
+  {% endif %}
+</body>
+
+</html>
